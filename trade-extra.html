@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade — extra details | RoeExchange</title>
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-w="426" data-h="283">
+  <div class="screen tight">
+    <header class="bar" style="height: 30px;">
+      <a href="index.html"><img class="logo" src="images/logo.png" alt="RoeExchange" style="left: 1px; top: 2px; width: 108px;"></a>
+    </header>
+
+    <h1 class="a c u" style="left: 0; top: 34px; width: 426px; font-size: 15px; font-weight: 400; line-height: 20px;">Extra details</h1>
+
+    <form data-done="trade-done" novalidate>
+      <label for="t-info" class="a c" style="left: 0; top: 65px; width: 429px; font-size: 13px; line-height: 16px;">More information about the product:</label>
+      <input class="pill" id="t-info" name="info" type="text" required
+        style="left: 72px; top: 84px; width: 285px; height: 21px; border-radius: 7px; font-size: 10px;">
+
+      <label for="t-change" class="a c" style="left: 0; top: 118px; width: 429px; font-size: 13px; line-height: 16px;">I would like to change my current product for:</label>
+      <input class="pill" id="t-change" name="change" type="text" required
+        style="left: 72px; top: 140px; width: 285px; height: 21px; border-radius: 7px; font-size: 10px;">
+
+      <label for="t-contact" class="a c" style="left: 0; top: 174px; width: 429px; font-size: 13px; line-height: 16px;">For more information you can contact me at:</label>
+      <input class="pill" id="t-contact" name="contact" type="text" required
+        style="left: 72px; top: 199px; width: 285px; height: 21px; border-radius: 7px; font-size: 10px;">
+
+      <button type="submit" class="btn btn-b" style="left: 163px; top: 235px; width: 103px; height: 19px; border-radius: 4px; font-size: 15px;">Finish</button>
+      <a href="trade-details.html" class="a c small-link" style="left: 164px; top: 259px; width: 100px; font-size: 7px; line-height: 9px;">Back</a>
+      <p class="a c form-error" style="left: 0; top: 270px; width: 426px; font-size: 7px;">Please fill in every field.</p>
+    </form>
+
+    <div class="overlay" id="trade-done">
+      <div class="msg">
+        <strong>Your trade is live!</strong>
+        Other students can now see what you're offering. When someone is interested they'll contact you
+        with the details you gave us.
+        <br>
+        <a href="index.html" class="btn btn-b">Back to home</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

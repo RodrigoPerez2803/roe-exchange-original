@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product | RoeExchange</title>
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-w="287" data-h="307">
+  <!-- Filled in by js/main.js using the product list in js/data.js -->
+  <div class="screen" id="product-detail">
+    <header class="bar" style="height: 18px;">
+      <a href="index.html"><img class="logo" src="images/logo.png" alt="RoeExchange" style="left: 1px; top: 1px; width: 82px;"></a>
+    </header>
+
+    <div class="a" style="left: 10px; top: 36px; width: 266px; height: 239px; background: #fff; border-radius: 10px;"></div>
+
+    <div class="a" style="left: 24px; top: 46px; width: 141px; height: 124px; display: flex; align-items: center; justify-content: center;">
+      <img data-image src="" alt="" style="max-width: 141px; max-height: 124px; width: 100%; height: 100%; object-fit: contain;">
+    </div>
+
+    <!-- right column -->
+    <div class="a c" style="left: 168px; top: 57px; width: 100px; color: #000;">
+      <h2 class="d-head" style="font-weight: 400;">Seller Details</h2>
+      <p class="d-val" data-field="seller"></p>
+    </div>
+    <div class="a c" style="left: 168px; top: 93px; width: 100px; color: #000;">
+      <h2 class="d-head" style="font-weight: 400;" data-field="title"></h2>
+      <p class="d-val" data-field="price"></p>
+    </div>
+    <div class="a c" style="left: 168px; top: 133px; width: 100px; color: #000;">
+      <h2 class="d-head" style="font-weight: 400;">Product Condition</h2>
+      <p class="d-val" data-field="condition"></p>
+    </div>
+
+    <!-- bottom row -->
+    <div class="a c" style="left: 34px; top: 180px; width: 120px; color: #000;">
+      <h2 class="d-head nowrap" style="font-weight: 400;">Description of the product</h2>
+      <p class="d-val" data-field="description" style="width: 96px; margin: 5px auto 0;"></p>
+    </div>
+    <div class="a c" style="left: 163px; top: 180px; width: 110px; color: #000;">
+      <h2 class="d-head nowrap" style="font-weight: 400;">Can it be negotiated?</h2>
+      <p class="d-val" data-field="negotiable" style="margin-top: 5px;"></p>
+    </div>
+    <div class="a c" style="left: 168px; top: 218px; width: 100px; color: #000;">
+      <h2 class="d-head" style="font-weight: 400;">Delivery Method</h2>
+      <p class="d-val" data-field="delivery" style="width: 80px; margin: 5px auto 0;"></p>
+    </div>
+
+    <button type="button" class="btn btn-b" id="deal-btn" style="left: 109px; top: 284px; width: 69px; height: 14px; border-radius: 3px; font-size: 9px;">DEAL</button>
+    <a href="store.html" class="a c small-link" data-back style="left: 124px; top: 299px; width: 40px; font-size: 4.5px; line-height: 6px;">Back</a>
+
+    <div class="overlay" id="deal-msg">
+      <div class="msg">
+        <strong>Deal requested!</strong>
+        We've let <span id="deal-seller"></span> know you're interested. You'll meet at:
+        <em id="deal-place"></em>.
+        <br>
+        <button type="button" class="btn btn-b" data-close>OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

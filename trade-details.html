@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade — product details | RoeExchange</title>
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-w="426" data-h="282">
+  <div class="screen tight">
+    <header class="bar" style="height: 30px;">
+      <a href="index.html"><img class="logo" src="images/logo.png" alt="RoeExchange" style="left: 1px; top: 2px; width: 108px;"></a>
+    </header>
+
+    <h1 class="a c u" style="left: 0; top: 34px; width: 426px; font-size: 15px; font-weight: 400; line-height: 20px;">Product details</h1>
+
+    <form data-done="trade-extra.html" novalidate>
+      <label for="t-name" class="a r" style="left: 0; top: 63px; width: 149px; font-size: 13px; line-height: 16px;">Hello, my name is:</label>
+      <input class="pill" id="t-name" name="name" type="text" autocomplete="name" required
+        style="left: 153px; top: 64px; width: 218px; height: 14px; border-radius: 7px; font-size: 9px; padding: 0 6px; border-width: 1px;">
+
+      <label for="t-item" class="a r" style="left: 0; top: 88px; width: 149px; font-size: 13px; line-height: 16px;">I have this...</label>
+      <input class="pill" id="t-item" name="item" type="text" required
+        style="left: 153px; top: 87px; width: 218px; height: 14px; border-radius: 7px; font-size: 9px; padding: 0 6px; border-width: 1px;">
+
+      <p class="a c" style="left: 0; top: 112px; width: 426px; font-size: 13px; line-height: 16px;">👇 Add a picture of your product here 👇</p>
+      <label class="upload" id="trade-upload" title="Add a picture" style="left: 156px; top: 133px; width: 117px; height: 98px; border-radius: 10px;">
+        <svg viewBox="0 0 120 100" aria-hidden="true">
+          <path d="M24 4v40M4 24h40" stroke="#000" stroke-width="12"/>
+          <path d="M54 30h48a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8H40a8 8 0 0 1-8-8V54" fill="none" stroke="#000" stroke-width="9"/>
+          <path d="M42 86l18-22 12 13 14-18 18 27z" fill="#000"/>
+          <circle cx="90" cy="47" r="7" fill="#000"/>
+        </svg>
+        <input type="file" accept="image/*" data-preview="trade-upload" aria-label="Product picture">
+      </label>
+
+      <button type="submit" class="btn btn-b" style="left: 163px; top: 239px; width: 103px; height: 19px; border-radius: 4px; font-size: 15px;">Continue</button>
+      <a href="trade.html" class="a c small-link" style="left: 164px; top: 263px; width: 100px; font-size: 7px; line-height: 9px;">Back</a>
+      <p class="a c form-error" style="left: 0; top: 272px; width: 426px; font-size: 7px;">Please tell us your name and what you have.</p>
+    </form>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

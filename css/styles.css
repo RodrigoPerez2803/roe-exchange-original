@@ -1,0 +1,370 @@
+/* =========================================================
+   RoeExchange — faithful version of the mockups
+   Every page is a "screen" drawn at the exact size of its
+   mockup (data-w / data-h on <body>). js/main.js scales the
+   screen to fill the browser window, so the page looks just
+   like the design at any size.
+   ========================================================= */
+
+:root {
+  --green: #13a574;
+  --orange: #f5a623;
+  --blue: #1f78b4;
+  --black: #0d0f0e;
+  --white: #ffffff;
+  --sold: #3f1d4d;
+  --error: #d93025;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--green);
+  color: var(--white);
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0.035em; /* the mockups' large text is set slightly wider */
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+/* ---------- Screen ---------- */
+.screen {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: var(--white);
+}
+
+.logo {
+  position: absolute;
+  height: auto;
+}
+
+/* Everything inside a screen is placed with left/top/width in px */
+.a {
+  position: absolute;
+}
+
+.c {
+  text-align: center;
+}
+
+.r {
+  text-align: right;
+}
+
+.box {
+  position: absolute;
+  overflow: hidden;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.line {
+  position: absolute;
+  background: var(--white);
+}
+
+.u {
+  text-decoration: underline;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: filter 0.15s, transform 0.15s;
+}
+
+.btn:hover {
+  filter: brightness(1.15);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-w {
+  background: var(--white);
+  color: #000;
+}
+
+.btn-w:hover {
+  filter: brightness(0.93);
+}
+
+.btn-b {
+  background: var(--black);
+  color: var(--white);
+}
+
+.btn-sold {
+  background: var(--sold);
+  color: var(--white);
+  cursor: not-allowed;
+  text-transform: uppercase;
+}
+
+.btn-sold:hover {
+  filter: none;
+}
+
+.small-link {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.small-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Inputs ---------- */
+.pill {
+  position: absolute;
+  background: var(--white);
+  border: 2px solid transparent;
+  color: #000;
+  outline: none;
+  padding: 0 10px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.pill:focus {
+  border-color: var(--black);
+}
+
+.pill.invalid {
+  border-color: var(--error);
+  background: #fff1f0;
+}
+
+.form-error {
+  display: none;
+}
+
+.form-error.show {
+  display: block;
+}
+
+/* picture boxes */
+.upload {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  color: #000;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.upload svg {
+  width: 72%;
+  height: 82%;
+}
+
+.upload img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* ---------- Colleges ---------- */
+.college {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.college img {
+  position: absolute;
+  top: 0;
+  width: 117px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: box-shadow 0.15s;
+}
+
+.college span {
+  position: absolute;
+  left: 0;
+  top: 229px;
+  width: 100%;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 22px;
+  transition: box-shadow 0.15s;
+}
+
+.college.selected img,
+.college.selected span {
+  box-shadow: 0 0 0 3px var(--white);
+}
+
+.c-whitelands { background: #4a1f50; }
+.c-digby { background: #2e86c1; }
+.c-southlands { background: #2b2f6b; }
+.c-froebel { background: var(--orange); }
+
+/* small text in the mockups has normal spacing */
+.tight,
+.card,
+#product-detail {
+  letter-spacing: 0;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* ---------- Product cards ---------- */
+.card {
+  position: absolute;
+  width: 308px;
+  height: 151px;
+  background: var(--white);
+  color: #000;
+  border-radius: 18px;
+}
+
+.card .pic {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 178px;
+  height: 151px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .info {
+  position: absolute;
+  left: 166px;
+  top: 0;
+  width: 126px;
+  height: 151px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12.5px;
+  line-height: 21.5px;
+}
+
+.card .info .btn {
+  position: static;
+  width: 95px;
+  height: 15px;
+  margin-top: 4px;
+  border-radius: 8px;
+  font-size: 9.5px;
+}
+
+/* ---------- Product detail ---------- */
+.d-head {
+  display: inline-block;
+  padding: 0 5px 1px;
+  border-bottom: 1px solid #000;
+  font-size: 8.5px;
+  line-height: 11px;
+}
+
+.d-val {
+  font-size: 7.5px;
+  line-height: 10px;
+}
+
+/* ---------- Messages (shown over the screen) ---------- */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.overlay .msg {
+  width: 72%;
+  padding: calc(var(--u) * 4);
+  background: var(--white);
+  color: #000;
+  border-radius: calc(var(--u) * 2.5);
+  text-align: center;
+  font-size: calc(var(--u) * 2.6);
+  line-height: 1.4;
+}
+
+.overlay .msg strong {
+  display: block;
+  margin-bottom: calc(var(--u) * 1.5);
+  color: var(--green);
+  font-size: calc(var(--u) * 3.6);
+  font-weight: 500;
+}
+
+.overlay .msg .btn {
+  position: static;
+  display: inline-flex;
+  margin-top: calc(var(--u) * 3);
+  padding: calc(var(--u) * 1) calc(var(--u) * 4);
+  border-radius: calc(var(--u) * 1);
+}

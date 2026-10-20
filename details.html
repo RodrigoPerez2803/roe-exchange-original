@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal details | RoeExchange</title>
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-w="793" data-h="530">
+  <div class="screen">
+    <header class="bar" style="height: 57px;">
+      <a href="index.html"><img class="logo" src="images/logo.png" alt="RoeExchange" style="left: 8px; top: 9px; width: 193px;"></a>
+    </header>
+
+    <form id="details-form" novalidate>
+      <h1 class="a c" style="left: 33px; top: 76px; width: 300px; font-size: 24px; font-weight: 400; line-height: 30px;">Personal details:</h1>
+
+      <!-- profile picture: click to choose one -->
+      <label class="upload" id="avatar" title="Add a profile picture" style="left: 104px; top: 118px; width: 172px; height: 172px; border-radius: 50%;">
+        <svg viewBox="0 0 172 172" fill="none" stroke="#000" stroke-width="5" aria-hidden="true" style="width: 100%; height: 100%;">
+          <circle cx="86" cy="59" r="31"/>
+          <path d="M31 142a56 56 0 0 1 112 0"/>
+        </svg>
+        <input type="file" accept="image/*" data-preview="avatar" aria-label="Profile picture">
+      </label>
+
+      <!-- left column -->
+      <label for="first-name" class="a c" style="left: 52px; top: 309px; width: 272px; font-size: 21px; line-height: 26px;">First name:</label>
+      <input class="pill" id="first-name" name="firstName" type="text" autocomplete="given-name" required
+        style="left: 52px; top: 337px; width: 272px; height: 22px; border-radius: 10px; font-size: 13px;">
+
+      <label for="last-name" class="a c" style="left: 52px; top: 384px; width: 272px; font-size: 21px; line-height: 26px;">Last name:</label>
+      <input class="pill" id="last-name" name="lastName" type="text" autocomplete="family-name" required
+        style="left: 52px; top: 412px; width: 272px; height: 22px; border-radius: 10px; font-size: 13px;">
+
+      <!-- right column -->
+      <label for="year" class="a c" style="left: 436px; top: 159px; width: 285px; font-size: 21px; line-height: 26px;">Year of study:</label>
+      <select class="pill" id="year" name="year" required
+        style="left: 436px; top: 190px; width: 285px; height: 22px; border-radius: 10px; font-size: 13px;">
+        <option value=""></option>
+        <option>Foundation year</option>
+        <option>Year 1</option>
+        <option>Year 2</option>
+        <option>Year 3</option>
+        <option>Postgraduate</option>
+      </select>
+
+      <label for="email" class="a c" style="left: 436px; top: 232px; width: 285px; font-size: 21px; line-height: 26px;">Roehampton Email:</label>
+      <input class="pill" id="email" name="email" type="email" pattern=".+@roehampton\.ac\.uk"
+        title="Use your @roehampton.ac.uk email" required
+        style="left: 436px; top: 264px; width: 285px; height: 22px; border-radius: 10px; font-size: 13px;">
+
+      <label for="student-id" class="a c" style="left: 436px; top: 309px; width: 285px; font-size: 21px; line-height: 26px;">Student ID:</label>
+      <input class="pill" id="student-id" name="studentId" type="text" required
+        style="left: 436px; top: 338px; width: 285px; height: 22px; border-radius: 10px; font-size: 13px;">
+
+      <label for="course" class="a c" style="left: 436px; top: 385px; width: 285px; font-size: 21px; line-height: 26px;">Course:</label>
+      <input class="pill" id="course" name="course" type="text" required
+        style="left: 436px; top: 413px; width: 285px; height: 22px; border-radius: 10px; font-size: 13px;">
+
+      <button type="submit" class="btn btn-b" style="left: 282px; top: 459px; width: 194px; height: 34px; border-radius: 6px; font-size: 24px;">Continue</button>
+
+      <p class="a c form-error" style="left: 0; top: 503px; width: 793px; font-size: 12px;">Please fill in every field. Your email must end in @roehampton.ac.uk</p>
+    </form>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
